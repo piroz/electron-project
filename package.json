@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "electron-project",
+  "version": "0.0.1",
+  "description": "my electron project template",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "electron dist",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piroz/electron-project.git"
+  },
+  "author": "piroz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piroz/electron-project/issues"
+  },
+  "homepage": "https://github.com/piroz/electron-project#readme",
+  "dependencies": {
+    "electron": "^1.6.8"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.4.38",
+    "typescript": "^2.3.2"
+  }
+}
