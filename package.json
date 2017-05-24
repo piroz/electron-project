@@ -1,6 +1,9 @@
 {
   "private": true,
   "name": "electron-project",
+  "config": {
+    "feedurl": "https://github.com/piroz/electron-project"
+  },
   "version": "0.0.1",
   "description": "my electron project template",
   "main": "dist/electron-apps/index.js",

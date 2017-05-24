@@ -1,3 +1,3 @@
 import {Main} from "./main";
 
-(new Main("https://github.com/piroz")).run();
+(new Main(process.env.npm_package_config_feedurl)).run();

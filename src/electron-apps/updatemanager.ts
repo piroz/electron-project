@@ -102,22 +102,42 @@ export class UpdateManager {
         });
     }
 
+    /**
+     * autoUpdater error handler
+     * @param error 
+     */
     protected onError(error: Error): void {
         throw error;
     }
 
+    /**
+     * autoUpdater checking-for-update handler
+     * @param error 
+     */
     protected onCheckForUpdate(): void {
 
     }
 
+    /**
+     * autoUpdater update-available handler
+     * @param error 
+     */
     protected onUpdateAvailable(): void {
 
     }
 
+    /**
+     * autoUpdater update-downloaded handler
+     * @param error 
+     */
     protected onUpdateDownloaded(): void {
         this.autoUpdater.quitAndInstall();
     }
 
+    /**
+     * autoUpdater update-not-available handler
+     * @param error 
+     */
     protected onUpdateNotAvailable(): void {
 
     }
