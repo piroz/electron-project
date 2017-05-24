@@ -32,6 +32,7 @@ export class UpdateManager {
         protected autoUpdater: Electron.AutoUpdater,
         protected feedUrl: string) {
             this.updateDotExePath = path.resolve(path.dirname(process.execPath), '..', 'update.exe');
+            this.autoUpdater.setFeedURL(this.feedUrl);
     }
     
     /**
@@ -47,8 +48,6 @@ export class UpdateManager {
         }
 
         this.setupUpdateEventHandlers();
-
-        this.autoUpdater.setFeedURL(this.feedUrl);
 
         switch (process.argv[1]) {
             case '--squirrel-firstrun':

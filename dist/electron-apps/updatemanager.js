@@ -9,6 +9,7 @@ var UpdateManager = (function () {
         this.autoUpdater = autoUpdater;
         this.feedUrl = feedUrl;
         this.updateDotExePath = path.resolve(path.dirname(process.execPath), '..', 'update.exe');
+        this.autoUpdater.setFeedURL(this.feedUrl);
     }
     UpdateManager.prototype.isRunningAppLatest = function () {
         var _this = this;
@@ -16,7 +17,6 @@ var UpdateManager = (function () {
             return true;
         }
         this.setupUpdateEventHandlers();
-        this.autoUpdater.setFeedURL(this.feedUrl);
         switch (process.argv[1]) {
             case '--squirrel-firstrun':
                 var target = path.basename(process.execPath);
